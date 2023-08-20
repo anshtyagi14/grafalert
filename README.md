@@ -5,7 +5,7 @@
 ### Download MailHog
 
 ```console
-wget https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64
+$ wget https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_amd64
 ```
 
 ### Make It Executable
@@ -13,7 +13,7 @@ wget https://github.com/mailhog/MailHog/releases/download/v1.0.1/MailHog_linux_a
 You'll need to make the downloaded file executable:
 
 ```console
-chmod +x MailHog_linux_amd64
+$ chmod +x MailHog_linux_amd64
 ```
 
 ### Run MailHog
@@ -21,7 +21,7 @@ chmod +x MailHog_linux_amd64
 Simply run the binary
 
 ```console
-./MailHog_linux_amd64
+$ ./MailHog_linux_amd64
 ```
 
 By default, MailHog starts an SMTP server on port 1025 and a web interface on port 8025.
