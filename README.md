@@ -16,6 +16,24 @@ You'll need to make the downloaded file executable:
 $ chmod +x MailHog_linux_amd64
 ```
 
+### Configure Your Application
+
+Configure Grafana.ini to send emails to localhost:1025, and they will be caught by MailHog.
+
+```console
+$ sudo vim /etc/grafana/grafana.ini
+/smtp
+```
+
+```yml
+[smtp]
+enabled = true
+host = localhost:1025
+from_address = admin@grafana.localhost
+from_name = Grafana
+startTLS_policy = NoStartTLS
+```
+
 ### Run MailHog
 
 Simply run the binary
@@ -30,6 +48,4 @@ By default, MailHog starts an SMTP server on port 1025 and a web interface on po
 
 Open your web browser and navigate to http://localhost:8025 to view the caught emails.
 
-### Configure Your Application
 
-Finally, configure your application (e.g., Grafana) to send emails to localhost:1025, and they will be caught by MailHog.
